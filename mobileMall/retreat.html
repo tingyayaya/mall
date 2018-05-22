@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的退货</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript" src="dist/js/aui-tab.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    </script>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+<!--订单列表-->
+</head>
+<body>
+<header class="aui-bar aui-bar-nav aui-bar-light" id="fixed_header">
+    <a class="aui-pull-left aui-btn" onclick="window.location.href='personalcenter.html'">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">售后/退款</div>
+</header>
+<section class="aui-content margin-contain-bc shopcartNo hide" style="margin-top:120px;">
+    <img src="dist/imgs/noList2.png">
+</section>
+<div class="aui-content margin-contain-t3 order-list">
+    <div class="aui-card-list">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light ">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-22 font-light-a">
+                             <span>2017-10-02</span>&nbsp;
+                             <span>订单编号：123456789</span>
+                        </div>
+                        <div class="pull-right font-obvious-a aui-font-size-26">退款成功</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light retreat-success">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                            <span class="margin4b aui-font-size-30 aui-text-danger">¥500.0 <i class="font-light-a">x1</i></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">
+                    <div class="clearfix">
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right btn-receipt " onclick="window.location.href='retreat-after.html'">申请售后</div>
+                        <div class="aui-btn  aui-btn-sm  aui-margin-r-10 pull-right btn-receipt btn-preventDefault" >查看详情</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light ">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-22 font-light-a">
+                             <span>2017-10-02</span>&nbsp;
+                             <span>订单编号：123456789</span>
+                        </div>
+                        <div class="pull-right font-obvious-a aui-font-size-26">交易完成</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light retreat-success">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                            <span class="margin4b aui-font-size-30 aui-text-danger">¥500.0 <i class="font-light-a">x1</i></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">
+                    <div class="clearfix">
+                        <div class="aui-btn  aui-btn-sm  aui-margin-r-10 pull-right btn-receipt btn-preventDefault" >申请售后</div>
+                        <div class="aui-btn  aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right btn-receipt " onclick="window.location.href='retreat-success.html'">查看详情</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-22 font-light-a">
+                             <span>2017-10-02</span>&nbsp;
+                             <span>订单编号：123456789</span>
+                        </div>
+                        <div class="pull-right font-obvious-a aui-font-size-26">交易完成</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light retreat-success">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                            <span class="margin4b aui-font-size-30 aui-text-danger">¥500.0 <i class="font-light-a">x1</i></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                            <span class="margin4b aui-font-size-30 aui-text-danger">¥500.0 <i class="font-light-a">x1</i></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">
+                    <div class="clearfix">
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right btn-receipt" onclick="window.location.href='retreat-after.html'">申请售后</div>
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right btn-receipt" onclick="window.location.href='retreat-success.html'">查看详情</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="mask hide"></div>
+
+
+<script type="text/javascript">
+$(function(){
+	var getItems = function(){
+		$('.order-list').children().remove();
+        var mydata = {
+            type:'Order',
+            func:'retreat',
+            openid:sessionStorage.openId
+        };
+        mydata = JSON.stringify(mydata);
+        $.ajax({
+            type:'post',
+            data:{data:mydata},
+            url:'../data.php',
+            success:function(data){
+               // console.log(data);
+                if(data.rs==100){
+                	var orders = data.list;
+                	var content = '';
+                	for(var i=0;i<orders.length; i++){
+                		 var order = orders[i];
+                		 
+                		 var refundtext = '';
+                		 switch(order.refundstate){
+                		 	case 0:
+                				refundtext = "售后中";
+                			break;
+                		 	case 1:
+                				refundtext = "售后完成";
+                			break;
+                			default: break;
+                		 }
+                		 //console.log(item);
+                		 content += '<div class="aui-card-list">\
+                		        <div class="aui-card-list-content">\
+                         <ul class="aui-list aui-media-list">\
+                             <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">\
+                             <div class="aui-list-item-inner">\
+                                 <div class="aui-list-item-title pull-left aui-font-size-22 font-light-a">\
+                                      <span>'+order.date+'</span>&nbsp;\
+                                      <span>订单编号：'+order.XFDH+'</span>\
+                                 </div>\
+                                 <div class="pull-right font-obvious-a aui-font-size-26">'+refundtext+'</div>\
+                             </div>\
+                          	 </li>';
+                             
+                             if(order.list && order.list.length>0){
+                             	var items = order.list;
+                             	var j = 0;
+                             	for(var k=0; k<items.length; k++){
+                             		var item = items[k];
+                             		var itemclass = '';
+                             		if(item.canrefund == 0){
+                             			itemclass = 'retreat-success';
+                             			j++;
+                             		}
+                            content += '<li class="aui-list-item aui-list-item-middle product-list aui-border-b-light '+itemclass+'">\
+                            <div class="aui-media-list-item-inner">\
+                                <div class="aui-list-item-media aui-pull-left">\
+                                    <img src="'+item.pic+'">\
+                                </div>\
+                                <div class="aui-list-item-inner aui-pull-left width200">\
+                                    <div class="aui-list-item-text productname">'+item.productName+'</div>\
+                                    <span class="margin4b aui-font-size-30 aui-text-danger">¥'+item.wholesale+' <i class="font-light-a">x'+item.num+'</i></span>\
+                                </div>\
+                            </div>\
+                        	</li>';
+                             
+                             	}
+                             }    
+							
+                         	content += '<li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">\
+                                 <div class="clearfix">';
+                                 	if(items.length > j){
+                                 		content += '<div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right btn-receipt" onclick="window.location.href=\'retreat-after.html?xdfh='+order.XFDH+'\'">申请售后</div>';
+                                 	}	
+                                 	if(order.refund == 1){
+                                 		content += '<div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right btn-receipt" onclick="window.location.href=\'retreat-success.html?xdfh='+order.XFDH+'\'">查看详情</div>';
+                                 	}
+                            content += '</div>\
+                             </li>';
+                         
+                             
+                         content += '</ul>\
+                     </div>\
+                 </div>';
+                	}
+                	$('.order-list').append(content);
+                }
+            }
+        });  
+	};
+	getItems();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>查看物流</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/logistics.js?'+Math.random()+'\">\<\/script>');
+    </script>
+
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        font-size: 0.8rem;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+</head>
+<body>
+<!--订单详情-->
+<div class="aui-content" id="fixed_header2">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">查看物流</div>
+    </header>
+</div>
+<div class="aui-content margin-contain-t2">
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item" style="position: relative">
+            <div class="aui-media-list-item-inner">
+                <div class="info-left">
+                    <div class="info-list1">
+                        <label>物流状态</label><span style="color:#cb666c">&nbsp;</span>
+                    </div>
+                    <div class="info-list">
+                        <label>承运来源：</label><span class="logistic_company">中通快递</span>
+                    </div>
+                    <div class="info-list">
+                        <label>运单编号：</label><span class="logistic_number">45621566</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="aui-content clearfix"></div>
+<div class="aui-content aui-margin-t-0">
+    <ul class="aui-list aui-media-list aui-list-in logistics-list">
+       <!-- <li class="aui-list-item list-height">
+           <div class="icon-box"><i class="icon-o icon-new"></i></div>
+           <div class="info-box">
+               <p class="l-list-o">签收他人签收</p>
+               <p class="time-o">2018-04-28 11:23:28</p>
+           </div>
+        </li>
+        <li class="aui-list-item list-height">
+            <div class="icon-box"><i class="icon-o icon-normal"></i></div>
+            <div class="info-box">
+                <p class="l-list-o">深圳市速递员安排投递</p>
+                <p class="time-o">2017-04-28 11:23:28</p>
+            </div>
+        </li>
+       -->
+    </ul>
+</div>
+
+<!--<div class="aui-content" id="btn-nav" style="height: 50px">
+    <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm pull-right" style="margin-right: 15px">确认收货</div>
+    <div class="aui-btn aui-btn-outlined aui-btn-sm pull-right ">查看物流</div>
+</div>-->
+
+</body>
+</html>

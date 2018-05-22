@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>预约服务</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/date.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/orderService?'+Math.random()+'\">\<\/script>');
+    </script>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        font-size: 0.8rem;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+</head>
+<body>
+<div class="aui-content" id="fixed_header2">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">预约服务</div>
+    </header>
+</div>
+<div class="aui-content margin-contain-t2">
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item ">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        <img src="dist/imgs/address_icon.png">
+                        <span class="storeName"></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="aui-content aui-margin-b-15"></div>
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media productimg">
+                    <img src="dist/imgs/large1.jpg">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                    <span class="font-obvious-b margin4b productprice">¥500.0</span>
+                    <div class="font-light-a pull-right aui-font-size-14 margin4b">X<span>1</span></div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title pull-left">支付方式</div>
+                <div class="aui-list-item-right pull-right " style="line-height: 24px">线下支付</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner2" style="padding-left: 0;">
+                <span class="title-text">时间</span>
+                <input class="input-text kbtn" type="text" placeholder="选择时间" id="Time" >
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner2" style="padding-left: 0;">
+                <span class="title-text">联系方式</span>
+                <input class="input-text" type="number" placeholder="手机号码" id="Phone">
+            </div>
+        </li>
+    </ul>
+</div>
+<div id="datePlugin"></div>
+
+<div class="aui-content" id="btn-nav">
+    <div class="aui-btn-danger btn-up2 pull-right btnOrder">提交预约</div>
+</div>
+</body>
+<script type="text/javascript" src="dist/js/date.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#Time').date({theme:"datetime"});
+    });
+</script>
+</html>

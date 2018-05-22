@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>确认收货</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-tab.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    </script>
+
+</head>
+<body>
+<!--订单列表-->
+
+<div class="aui-content" id="fixed_header">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">确认收货</div>
+        <a class="aui-pull-right aui-btn" onclick="window.location.href='index.html'">
+            <i class="iconfont icon-index"></i>
+        </a>
+    </header>
+</div>
+
+<div class="aui-content" style="margin-top: 44px">
+    <div class="b-box">
+        <img src="dist/imgs/mydal-yes-small.png">
+        <span>&nbsp;&nbsp;交易成功</span>
+    </div>
+</div>
+<div class="aui-content btn-box" style="border-bottom: 10px solid #f5f5f5">
+    <div class="aui-btn  aui-btn-outlined aui-margin-r-15" onclick="window.location.href='toevaluate.html'">立即评价</div>
+    <div class="aui-btn  aui-btn-outlined" onclick="window.location.href='Orderdetail.html'">订单详情</div>
+</div>
+<section class="aui-content">
+    <div class="aui-card-list">
+        <div class="aui-card-list-header">
+            热门商品推荐
+        </div>
+        <div class="aui-card-list-content-padded aui-border-b aui-border-t">
+            <div class="aui-row aui-row-padded">
+                <div class="aui-col-xs-6">
+                    <img src="dist/imgs/small1.jpg" onclick="window.location.href='shopdetail.html'"/>
+                    <div class="shop-name">后 拱振享 阴阳平衡气津水溶液面霜三件套</div>
+                    <span class="font-obvious-b shop-price">¥60.0</span>
+                </div>
+                <div class="aui-col-xs-6">
+                    <img src="dist/imgs/small2.jpg" onclick="window.location.href='shopdetail.html'"/>
+                    <div> 阴阳平衡气津水</div>
+                    <span class="font-obvious-b shop-price">¥60.0</span>
+                </div>
+            </div>
+            <div class="aui-row aui-row-padded">
+                <div class="aui-col-xs-6">
+                    <img src="dist/imgs/small1.jpg" onclick="window.location.href='shopdetail.html'"/>
+                    <div class="shop-name">后 拱振享 阴阳平衡气津水溶液面霜三件套</div>
+                    <span class="font-obvious-b shop-price">¥60.0</span>
+                </div>
+                <div class="aui-col-xs-6">
+                    <img src="dist/imgs/small2.jpg" onclick="window.location.href='shopdetail.html'"/>
+                    <div> 阴阳平衡气津水</div>
+                    <span class="font-obvious-b shop-price">¥60.0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<div class="aui-content" id="footer-nav">
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item" onclick="mallsort()">
+            <i class="aui-iconfont iconfont icon-index "></i>
+            <div class="aui-bar-tab-label">商城</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <i class="aui-iconfont iconfont icon-cart"  onclick="shoppingcart()"></i>
+            <div class="aui-bar-tab-label">购物车</div>
+        </div>
+        <div class="aui-bar-tab-item active">
+            <div class="aui-badge hide"></div>
+            <i class="aui-iconfont iconfont icon-order"  onclick="order()"></i>
+            <div class="aui-bar-tab-label">订单</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-my"  onclick="center()"></i>
+            <div class="aui-bar-tab-label">我的</div>
+        </div>
+    </footer>
+</div>-->
+
+</body>
+</html>

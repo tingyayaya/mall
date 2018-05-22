@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript" src="dist/js/aui-tab.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/order.js?'+Math.random()+'\">\<\/script>');
+    </script>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+<!--订单列表-->
+</head>
+<body>
+<header class="aui-bar aui-bar-nav aui-bar-light" id="fixed_header">
+    <a class="aui-pull-left aui-btn" onClick="location.href='personalcenter.html'">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">我的订单</div>
+</header>
+<div class="kong-bar"></div>
+<div class="aui-tab margin-contain-t3 fixed_header3 aui-border-b" id="tab">
+    <div class="aui-tab-item"><span>全部</span></div>
+    <div class="aui-tab-item"><div id="pay-number"></div><span>待支付</span></div>
+    <div class="aui-tab-item"><div id="deliver-number"></div><span>待发货</span></div>
+    <div class="aui-tab-item"><div id="receiving-number"></div><span>待收货</span></div>
+    <div class="aui-tab-item"><div id="appraise-number"></div><span>待评价</span></div>
+</div>
+<section class="aui-content margin-contain-bc shopcartNo hide" style="margin-top:120px;">
+    <img src="dist/imgs/noList2.png">
+</section>
+<div class="aui-content margin-contain-t4 order-list">
+    <div class="aui-card-list ">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-28">2017-10-02</div>
+                        <div class="pull-right font-obvious-a aui-font-size-28">待支付</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light pay">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b-light height-100">
+                    <div class="aui-list-item-inner aui-pull-left">
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">¥1990.0</div>
+                        <div class="pull-right aui-font-size-30 aui-text-primary">共<span>1</span>件&nbsp;&nbsp;实付款:&nbsp;</div>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="pull-right aui-font-size-30 aui-text-info">可返<span>1</span>积分</div>
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">含运费0.00&nbsp;&nbsp;</div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">
+                    <div class="clearfix">
+                        <div class="pull-left aui-font-size-28 aui-text-danger"><img src="dist/imgs/times2.png" class="times2-icon">00:15:00</div>
+                        <div class="aui-btn aui-btn-success aui-btn-sm pull-right aui-margin-r-10 btn-wuliu">去支付</div>
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right btn-receipt">取消订单</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list ">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-28">2017-10-02</div>
+                        <div class="pull-right font-obvious-a aui-font-size-28">已取消</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light pay2">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b-light height-100">
+                    <div class="aui-list-item-inner aui-pull-left">
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">¥1990.0</div>
+                        <div class="pull-right aui-font-size-30 aui-text-primary">共<span>1</span>件&nbsp;&nbsp;实付款:&nbsp;</div>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="pull-right aui-font-size-30 aui-text-info">可返<span>1</span>积分</div>
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">含运费0.00&nbsp;&nbsp;</div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">
+                    <div class="clearfix">
+                        <div class="aui-btn aui-btn-success aui-btn-sm pull-right aui-margin-r-10 btn-wuliu">再次购买</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list ">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-28">2017-10-02</div>
+                        <div class="pull-right font-obvious-a aui-font-size-28">待支付</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light pay">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                            <span class="margin4b aui-font-size-30 aui-text-danger">¥500.0 <i class="font-light-a">x3</i></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b-light height-100">
+                    <div class="aui-list-item-inner aui-pull-left">
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">¥1990.0</div>
+                        <div class="pull-right aui-font-size-30 aui-text-primary">共<span>1</span>件&nbsp;&nbsp;实付款:&nbsp;</div>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="pull-right aui-font-size-30 aui-text-info">可返<span>1</span>积分</div>
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">含运费0.00&nbsp;&nbsp;</div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">
+                    <div class="clearfix">
+                        <div class="pull-left aui-font-size-28 aui-text-danger"><img src="dist/imgs/times2.png" class="times2-icon">00:15:00</div>
+                        <div class="aui-btn aui-btn-success aui-btn-sm pull-right aui-margin-r-10 btn-wuliu">去支付</div>
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right btn-receipt">取消订单</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list ">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-28">2017-10-02</div>
+                        <div class="pull-right font-obvious-a aui-font-size-28">已付款</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light deliver">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b-light height-100">
+                    <div class="aui-list-item-inner aui-pull-left">
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">¥1990.0</div>
+                        <div class="pull-right aui-font-size-30 aui-text-primary">共<span>1</span>件&nbsp;&nbsp;实付款:&nbsp;</div>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="pull-right aui-font-size-30 aui-text-info">可返<span>1</span>积分</div>
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">含运费0.00&nbsp;&nbsp;</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list ">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-28">2017-10-02</div>
+                        <div class="pull-right font-obvious-a aui-font-size-28">退款中</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light deliver2">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b-light height-100">
+                    <div class="aui-list-item-inner aui-pull-left">
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">¥1990.0</div>
+                        <div class="pull-right aui-font-size-30 aui-text-primary">共<span>1</span>件&nbsp;&nbsp;实付款:&nbsp;</div>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="pull-right aui-font-size-30 aui-text-info">可返<span>1</span>积分</div>
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">含运费0.00&nbsp;&nbsp;</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list ">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list ">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-28">2017-10-02</div>
+                        <div class="pull-right font-obvious-a aui-font-size-28">退款成功</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light deliver3">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b-light height-100">
+                    <div class="aui-list-item-inner aui-pull-left">
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">¥1990.0</div>
+                        <div class="pull-right aui-font-size-30 aui-text-primary">共<span>1</span>件&nbsp;&nbsp;实付款:&nbsp;</div>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="pull-right aui-font-size-30 aui-text-info">可返<span>1</span>积分</div>
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">含运费0.00&nbsp;&nbsp;</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list ">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-28">2017-10-02</div>
+                        <div class="pull-right font-obvious-a aui-font-size-28">待评价</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light eval">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b-light height-100">
+                    <div class="aui-list-item-inner aui-pull-left">
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">¥1990.0</div>
+                        <div class="pull-right aui-font-size-30 aui-text-primary">共<span>1</span>件&nbsp;&nbsp;实付款:&nbsp;</div>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="pull-right aui-font-size-30 aui-text-info">可返<span>1</span>积分</div>
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">含运费0.00&nbsp;&nbsp;</div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">
+                    <div class="clearfix">
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right " onclick="window.location.href='addcomment.html?xdfh=1244535'">追加评论</div>
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right ">删除订单</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="aui-card-list token">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-28">2017-10-02</div>
+                        <div class="pull-right font-obvious-a aui-font-size-28">待收货</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b-light height-100">
+                    <div class="aui-list-item-inner aui-pull-left">
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">¥1990.0</div>
+                        <div class="pull-right aui-font-size-30 aui-text-primary">共<span>1</span>件&nbsp;&nbsp;实付款:&nbsp;</div>
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="pull-right aui-font-size-30 aui-text-info">可返<span>1</span>积分</div>
+                        <div class="pull-right aui-font-size-30 aui-text-danger aui-text-primary">含运费0.00&nbsp;&nbsp;</div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end" style="padding-right: 0">
+                    <div class="clearfix">
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right">确认收货</div>
+                        <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm  aui-margin-r-10 pull-right" onclick="window.location.href='logistics.html?xdfh=1244535'">查看物流</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="mask hide"></div>
+</body>
+</html>

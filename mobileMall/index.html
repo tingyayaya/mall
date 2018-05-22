@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>上妍美妆商城</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <link rel="stylesheet" href="dist/css/swiper.css" type="text/css">
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript" src="dist/js/aui-tab.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/index.js?'+Math.random()+'\">\<\/script>');
+    </script>
+</head>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+        padding-bottom: 0.54rem;
+    }
+</style>
+<body>
+<div class="aui-content bg-fff" id="fixed_header">
+    <header class="aui-bar aui-bar-nav">
+       <div class="searchbar" id="search">
+           <img src="dist/imgs/headerlogo.png" alt="">
+           <input type="search"  id="search-input">
+           <img src="dist/imgs/fenlei.png" alt="" id="btn-search">
+           <i class="searchinput"></i>
+       </div>
+    </header>
+</div>
+
+<div class="swiper-container margin-contain-t2 swiper1">
+    <div class="swiper-wrapper index-top">
+        <div class="swiper-slide"><img src="dist/imgs/未标题-20.png"></div>
+        <div class="swiper-slide"><img src="dist/imgs/未标题-21.png"></div>
+        <div class="swiper-slide"><img src="dist/imgs/未标题-22.png"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<section class="aui-grid">
+    <div class="aui-row">
+    	<a class="aui-col-xs-3" href="category.html#caiz">
+            <i class="page-sort page-sort-1"></i>
+            <div class="aui-grid-label">彩妆专区</div>
+        </a>
+        <a class="aui-col-xs-3" href="category.html#xiz">
+            <i class="page-sort page-sort-2"></i>
+            <div class="aui-grid-label">卸妆专区</div>
+        </a>
+        <a class="aui-col-xs-3" href="category.html#mianm">
+            <i class="page-sort page-sort-3"></i>
+            <div class="aui-grid-label">面膜专区</div>
+        </a>
+        <a class="aui-col-xs-3" href="category.html#yanbu">
+            <i class="page-sort page-sort-4"></i>
+            <div class="aui-grid-label">眼部护理</div>
+        </a>
+    </div>
+</section>
+<section class="aui-margin-t-1 clearfix" id="section-container">
+    <div class="act-section sect-main" onclick="window.location.href='hot.html'">
+        <div class="box">
+            <img src="dist/imgs/示例产品图片/Bitmap.png" alt="">
+        </div>
+        <div>
+            <p class="title">HOT</p>
+            <p>热销榜单</p>
+            <span class="aui-text-danger">MERCHANT</span>
+            <small>查看全部&gt;</small>
+        </div>
+    </div>
+    <div class="sect-left">
+        <div class="act-section sect-1" onclick="window.location.href='suit.html'">
+            <div class="box">
+                <img src="dist/imgs/示例产品图片/Bitmap2.png" alt="" >
+            </div>
+            <div>
+                <p>商家推荐</p>
+                <span class="aui-text-danger">MERCHANT</span>
+                <small>查看全部&gt;</small>
+            </div>
+        </div>
+        <div class="act-section sect-2" onclick="window.location.href='new.html'">
+            <div class="box">
+                <img src="dist/imgs/示例产品图片/Bitmap3.png" alt="">
+            </div>
+            <div>
+                <p>新品</p>
+                <span class="aui-text-danger">NEW</span>
+                <small>查看全部&gt;</small>
+            </div>
+        </div>
+    </div>
+</section>
+<section >
+    <div class="index-block2">
+        <img src="dist/imgs/未标题-18.png" alt="">
+    </div>
+</section>
+<section id="brand-list" class="aui-margin-t-1">
+    <div class="all-pinpai">
+        <ul class="pinpai-nav">
+            <li class="active" >分类1</li>
+            <li>分类2</li>
+            <li>分类3</li>
+            <li>分类4</li>
+        </ul>
+        <div class="pinpai-pro">
+            <div class="pinpai-big" onclick="window.location.href='sorts.html'">
+                <img src="dist/imgs/示例产品图片/可可曲奇外包装.png" alt="">
+                <span>查看全部</span>
+            </div>
+            <div class="pinpai-small" onclick="window.location.href='shopdetail.html'">
+                <img src="dist/imgs/示例产品图片/奇亚籽外包装.png" alt="">
+            </div>
+            <div class="pinpai-small" onclick="window.location.href='shopdetail.html'">
+                <img src="dist/imgs/示例产品图片/红石榴外包装.png" alt="">
+            </div>
+            <div class="pinpai-small" onclick="window.location.href='shopdetail.html'">
+                <img src="dist/imgs/示例产品图片/香草奶昔内袋2.png" alt="">
+            </div>
+            <div class="pinpai-small" onclick="window.location.href='shopdetail.html'">
+                <img src="dist/imgs/示例产品图片/麦香奶昔内袋.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="aui-content" id="footer-nav">
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item active" onclick="mall()">
+            <i class="aui-iconfont iconfont icon-index"></i>
+            <div class="aui-bar-tab-label">商城</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <i class="aui-iconfont iconfont icon-sorts"  onclick="sorts()"></i>
+            <div class="aui-bar-tab-label">分类</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-badge hide"></div>
+            <i class="aui-iconfont iconfont icon-find"  onclick="finder()"></i>
+            <div class="aui-bar-tab-label">发现</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-cart"  onclick="shoppingcart()"></i>
+            <div class="aui-bar-tab-label">购物车</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-my"  onclick="center()"></i>
+            <div class="aui-bar-tab-label">会员</div>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="dist/js/swiper.min.js"></script>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript" src="dist/js/aui-slide.js"></script>
+    <script type="text/javascript" src="dist/js/aui-tab.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/shopdetail.js?'+Math.random()+'\">\<\/script>');
+    </script>    
+</head>
+<style>
+    body{
+        background-color: #f2f2f2;
+        font-size: 0.13rem;
+    }
+</style>
+<body>
+<div class="top-img-box">
+    <i class="top-img left-img pull-left" id="goback"></i>
+    <i class="right-img top-img pull-right" onclick="window.location.href='shoppingCart.html'"></i>
+</div>
+<div id="aui-slide">
+    <div class="aui-slide-wrap" >
+        <div class="aui-slide-node bg-dark">
+            <img src="" class="mainImg"/>
+        </div>
+    </div>
+    <div class="aui-slide-page-wrap"><!--分页容器--></div>
+</div>
+<div class="aui-content product-name aui-margin-b-15">
+    <div class="pull-left productName">
+        后 拱振享 阴阳平衡气津水溶液面霜三件套
+    </div>
+    <div class="pull-right">
+        <p class="aui-font-size-24">已售<span id="salenumber">0</span>件</p>
+        <p class="aui-font-size-24"><span class="font-obvious-a">90%</span>好评</p>
+    </div>
+   
+</div>
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list">
+        <li class="aui-list-item aui-border-b-light">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="dist/imgs/oefre.png" alt="" class="pro-img brandicon">
+                </div>
+                <div class="aui-list-item-inner brandname">
+              		
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item  aui-border-b-light" style="padding:0.1rem !important" onclick="qiDay()">
+            <div class="aui-list-item-title">
+                    <span class="font-obvious-a pro-price aui-font-size-30 ordinarysale"></span>
+                    <span class="pro-price-yuan aui-font-size-24 font-light-a retail"></span>
+            </div>
+             <div class="aui-list-item-right font-obvious-a">7天无理由</div>
+        </li>
+      <!--   <li class="aui-list-item  aui-border-b-light" style="padding:0.1rem !important">
+                <div class="aui-list-item-title" id="descriptiontext">
+                  
+                </div>
+        </li> -->
+    </ul>
+</div>
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list">
+        <!-- <li class=" aui-border-b-light">
+            <div class="">
+                <i class="back-img back-img-1"></i>
+                <span class=" width30">
+                购买最高可买<i id='integral'>0</i>积分
+                </span>
+                <i class="back-img back-img-2"></i>
+            </div>
+        </li> -->
+        <li class="aui-list-item  aui-border-b-light aui-list-item-arrow" style="padding:0.1rem !important" onclick="window.location.href='ordernote.html'">
+                <div class="aui-list-item-title font-light-a" >
+                    满99包邮
+                </div>
+        </li>
+    </ul>
+</div>
+<div class="aui-content aui-margin-b-15" style="display:none;">
+    <ul class="aui-list">
+        <li class="aui-list-item  aui-border-b-light" style="padding:0.1rem !important">
+            <div class="aui-list-item-title font-light-b chooseContent">
+             规格  <span class="youhuo sku active"></span>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="aui-popup1 aui-content hide">
+    <div class="aui-popup-content2">
+        <div class="img-box-icon aui-border-b">
+            <img src="" class="productThumb">
+            <div class="goods-info">
+                <div class="closed" onclick="close2()"></div>
+                <div class='productName'>兰蔻气垫粉凝霜送替换芯粉凝霜送替换芯</div>
+                <p class="choose-yuan aui-font-size-20 retail">¥220.0</p>
+                <i class="font-obvious-a choose-price aui-font-size-36 ordinarysale">¥555.0</i>
+            </div>
+        </div>
+        <div style="height: 150px"></div>
+        <div class="aui-border-b goods-list">
+            <p>规格:</p>
+            <div class="spanbox">
+                <span class="youhuo sku active"></span>
+            </div>
+        </div>
+        <div class="goods-list">
+            <p>数量:</p>
+            <div class="sizebox pull-right">
+                <input class="text_box aui-font-size-12" type="number" value="1"/>
+                <i class="add add-able">+</i>
+                <i class="reduce reduce-able">-</i>
+            </div>
+        </div>
+        <div class="aui-btn-danger btn-yes2 aui-margin-t-2">
+            确认
+        </div>
+    </div>
+</div>
+
+<div class="aui-tab aui-border-t" id="tab">
+    <div class="aui-tab-item aui-active">商品详情</div>
+    <div class="aui-tab-item">产品参数</div>
+    <div class="aui-tab-item">商品评论</div>
+</div>
+
+<div class="aui-content tab-detail describe-img detailImgs">
+  erer
+</div>
+
+<div class="aui-content tab-canshu describe-canshu hide">
+  <div class="de-canshu-group">
+      <label for="">品牌</label>
+      <span class="brandname">innisfree</span>
+  </div>
+  <div class="de-canshu-group">
+      <label for="">产品名称</label>
+      <span class="productName2">绿茶水份营养精华</span>
+  </div>
+  <div class="de-canshu-group">
+      <label for="">功效</label>
+      <span class="efficacy">补水保湿，控油，滋润</span>
+  </div>
+<!--   <div class="de-canshu-group">
+      <label for="">保质期</label>
+      <span class="shelflife">3年（具体以收到实物为准）</span>
+  </div> -->
+  <div class="de-canshu-group">
+      <label for="">适用人群</label>
+      <span class="fitfor">所有人群</span>
+  </div>
+  <div class="de-canshu-group">
+      <label for="">原产地</label>
+      <span class="origin">韩国</span>
+  </div>
+  <div class="de-canshu-group">
+      <label for="">产品容量</label>
+      <span class="sku">80ml</span>
+  </div>
+<!--   <div class="de-canshu-group">
+      <label for="">规格</label>
+      <span>症状</span>
+  </div> -->
+</div>
+
+<div class="aui-content tab-evaluate hide" id="comment-list">
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user">
+            <div class="aui-card-list-user-name">
+                <div class="ev-userName">ovx648433600</div>
+                <small class="ev-time">2017.02.02</small>
+            </div>
+            <div class="aui-card-list-user-info ev-content">东西很好</div>
+        </div>
+        <!-- <div class="aui-card-list-content-padded clearfix products">
+            <div class="aui-row aui-row-padded">
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small3.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small1.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small2.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small3.jpg" class="ev-imgs">
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user">
+            <div class="aui-card-list-user-name">
+                <div class="ev-userName">ovx648433600</div>
+                <small class="ev-time">2017.02.02</small>
+            </div>
+            <div class="aui-card-list-user-info ev-content">东西很好</div>
+        </div>
+        
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user">
+            <div class="aui-card-list-user-name">
+                <div class="ev-userName">ovx648433600</div>
+                <small class="ev-time">2017.02.02</small>
+            </div>
+            <div class="aui-card-list-user-info ev-content">东西很好</div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="command-shop container margin-contain-b">
+    <div class="youlick"><i class="back-img-3"></i>为你推荐</div>
+    <div id="item-list">
+    <div class="pro-5">
+        <img src="dist/imgs/large1.jpg" alt="">
+        <div class="product-name2">pny effexct 亚光遮瑕气垫粉底霜</div>
+        <div class="p-p">
+            <span class="product-price2 font-obvious-a aui-font-size-30">￥280</span><span class="product-yuanlai2">￥280.00</span>
+        </div>
+    </div>
+    <div class="pro-5">
+        <img src="dist/imgs/large1.jpg" alt="">
+        <div class="product-name2">pny effexct 亚光遮瑕气垫粉底霜</div>
+        <div class="p-p">
+            <span class="product-price2 font-obvious-a aui-font-size-30">￥280</span><span class="product-yuanlai2">￥280.00</span>
+        </div>
+    </div>
+    <div class="pro-5">
+        <img src="dist/imgs/large1.jpg" alt="">
+        <div class="product-name2">pny effexct 亚光遮瑕气垫粉底霜</div>
+        <div class="p-p">
+            <span class="product-price2 font-obvious-a aui-font-size-30">￥280</span><span class="product-yuanlai2">￥280.00</span>
+        </div>
+    </div>
+    <div class="pro-5">
+        <img src="dist/imgs/large1.jpg" alt="">
+        <div class="product-name2">pny effexct 亚光遮瑕气垫粉底霜</div>
+        <div class="p-p">
+            <span class="product-price2 font-obvious-a aui-font-size-30">￥280</span><span class="product-yuanlai2">￥280.00</span>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="mask hide"></div>
+<div class="popup-box2 hide">
+    <div class="closed" onclick="close2()"></div>
+   <div class="tel-title aui-font-size-36 tel-title-left">七天无理由</div>
+   <div class="aui-font-size-28 popup-cont">
+       收到商品7天内无理由退货，请保
+      持商品包装完整哦
+   </div>
+</div>
+<div class="aui-content" id="btn-nav">
+    <div class="aui-pull-left aui-border-r btn-tolike-a">
+        <i class="btn-like btn-icon-2"></i>
+    </div>
+    <div class="aui-pull-left btn-tocart-b position-re cart-num">
+        <i class="btn-gouwu btn-icon-2"></i>
+    </div>
+    <div class="aui-btn-danger btn-up5 pull-right btn-tobuy-b">立即购买</div>
+</div>
+</body>
+</html>

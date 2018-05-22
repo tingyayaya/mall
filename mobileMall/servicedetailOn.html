@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/servicedetailOn.js?'+Math.random()+'\">\<\/script>');
+    </script>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        font-size: 0.8rem;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+</head>
+<body>
+<!--订单详情-->
+<div class="aui-content" id="fixed_header2">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">订单详情</div>
+    </header>
+</div>
+<div class="aui-content margin-contain-t2">
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        <span class="order-num">订单号:40523155</span>
+                        <span class="text-right font-obvious-b order-status">已完成</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item aui-list-item-arrow logistics-info">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text aui-ellipsis-2 logistics-list">
+                        <img src="dist/imgs/wuliu_icon.png">
+                        <span>您已成功签收</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="aui-content aui-margin-b-15"></div>
+<div class="aui-content clearfix">
+    <ul class="aui-list aui-media-list aui-margin-b-15">
+        <li class="aui-list-item">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text paddin2">
+                        <div class="aui-list-item-left">收货人:<span class="consignee-name">大宝</span></div>
+                        <div class="aui-list-item-right aui-font-size-14 consignee-phone">15358464141</div>
+                    </div>
+                    <div class="aui-list-item-text aui-ellipsis-2">
+                        <img src="dist/imgs/address_icon.png">
+                        <span class="consignee-address">收货地址:浙江省杭州市西湖区文一西路550号</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--<div class="aui-content aui-margin-b-5">
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item" onclick="window.location.href='shopdetail.html'">
+            <div class="aui-media-list-item-inner">
+                <div class="aui-list-item-media">
+                    <img src="dist/imgs/large1.jpg">
+                </div>
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                    <span class="margin4b aui-font-size-14">¥500.0</span>
+                    <div class="font-light-a pull-right aui-font-size-14 margin4b">X<span>3</span></div>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner clearfix">
+                <div class="aui-btn aui-btn-outlined aui-btn-sm pull-right ">退款</div>
+            </div>
+        </li>
+    </ul>
+</div>-->
+
+<div class="aui-content aui-margin-t-10 order-price" style="margin-bottom: 65px">
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title pull-left">商品金额</div>
+                <div class="pull-right font-obvious-b" style="line-height: 24px">¥<span class="price-total">200.0</span></div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title pull-left">运费</div>
+                <div class="pull-right font-obvious-b" style="line-height: 24px">¥<span class="price-fare">0.0</span></div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<div class="aui-content payment hide">
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-border-b">
+            <span style="margin:0 auto;">付款详情</span>
+            <div class="imgbox pull-right">
+                <i class="aui-icon-close aui-iconfont"></i>
+            </div>
+        </div>
+        <div class="aui-card-list-footer">
+            <span>商品金额</span>
+            <span class="payMoney"></span>
+        </div>
+        <div class="aui-card-list-footer">
+            <span>包裹重量 (包含包装系数1.2)</span>
+            <span class="payweight"></span>
+        </div>
+        <div class="aui-card-list-footer">
+            <span>运费 (首重15元/kg,续重3元/kg)</span>
+            <span class="payFare"></span>
+        </div>
+        <div class="aui-card-list-footer">
+            <span class="aui-font-size-14" style="color: #000;">需付款</span>
+            <span class="aui-font-size-18 payTotal" style="color: #000;">100.0元</span>
+        </div>
+        <div class="aui-content aui-padded-10" style="margin-top: 50px">
+            <div class="aui-btn-success btn-up2 btn-toorder-a">确认付款</div>
+        </div>
+    </div>
+</div>
+<div class="mask hide"></div>
+
+<div class="aui-content" id="btn-nav" style="height: 50px">
+    <!--  <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm pull-right" style="margin-right: 15px">确认收货</div>-->
+    <div class="aui-btn aui-btn-outlined aui-btn-danger aui-btn-sm pull-right btn-toPay">支付</div>
+    <div class="aui-btn aui-btn-outlined aui-btn-sm pull-right btn-wuliu hide">查看物流</div>
+</div>
+
+</body>
+</html>

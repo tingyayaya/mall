@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的地址</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/LArea.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+     <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/addAddress.js?'+Math.random()+'\">\<\/script>');
+    </script>
+</head>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+<body>
+
+<div class="aui-content" id="fixed_header2">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onClick="javascript :history.back(-1)"></span>
+        </a>
+        <div class="aui-title">新增收货地址</div>
+        <a class="aui-pull-right">
+            <span style="color: #0a0a0a" class="btn-save">保存</span>
+        </a>
+    </header>
+</div>
+<div class="aui-content margin-contain-t">
+    <ul class="aui-list">
+        <li class="aui-list-item2 aui-border-b">
+            <div class="aui-list-item-inner2 ">
+                <span class="title-text">收件人姓名：</span>
+                <input class="input-text" type="text" id="username" placeholder="（请填写真实姓名）">
+            </div>
+        </li>
+        <li class="aui-list-item2 aui-border-b">
+            <div class="aui-list-item-inner2 ">
+                <span class="title-text">身份证：</span>
+                <input class="input-text" type="text" id="idcard">
+            </div>
+        </li>
+        <li class="aui-list-item2 aui-border-b">
+            <div class="aui-list-item-inner2 ">
+                <span class="title-text">手机：</span>
+                <input class="input-text" type="number" id="phonenum">
+            </div>
+        </li>
+        <li class="aui-list-item2 aui-border-b">
+            <div class="aui-list-item-inner2 ">
+                <span class="title-text">省市区：</span>
+                <input class="input-text" type="text" readonly=""  value="" id="city">
+                <input id="value" type="hidden" value="">
+            </div>
+        </li>
+        <li class="aui-list-item2 aui-border-b">
+            <div class="aui-list-item-inner2 ">
+                <span class="title-text">详细地址：</span>
+                <input class="input-text" type="text"  id="addresslast">
+                <input id="value" type="hidden" value="">
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+<script type="text/javascript" src="dist/js/LArea.js"></script>
+<script type="text/javascript" src="dist/js/LAreaData1.js"></script>
+<script type="text/javascript" src="dist/js/LAreaData2.js"></script>
+
+</html>

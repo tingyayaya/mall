@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/shoppingCart.js?'+Math.random()+'\">\<\/script>');
+    </script>   
+</head>
+<style>
+    body{
+        background-color: #f7f7f7;
+    }
+</style>
+<body>
+    <div class="aui-content" id="fixed_header">
+        <header class="aui-bar aui-bar-nav aui-border-b">
+            <div class="aui-title">购物车</div>
+            <span class="pull-right font-light-a aui-font-size-26 edit-cart">编辑</span>
+        </header>
+    </div>
+    <section class="aui-content margin-contain-t margin-contain-bc shopcartNo hide">
+        <img src="dist/imgs/noList.png">
+        <div class="btn-primary btn-upto2" onclick="window.location.href='index.html'">去逛逛</div>
+    </section>
+    <section class="aui-content margin-contain-t2  shopcartList ">
+        <div class="aui-card-list aui-border-t  clearfix cartItem aui-margin-b-0" >
+            <div class="sizebox2 hide">
+                <input class="text_box aui-font-size-30" type="number" value="1"/>
+                <span class="add add-able">+</span>
+                <span class="reduce reduce-able">-</span>
+            </div>
+            <div class="delete2 hide">
+                <img src="dist/imgs/delete.png" class="icon-ads-delete">
+            </div>
+            <div class="aui-list-item-label checkdiv pull-left ">
+                <input class="aui-radio checkbox" type="checkbox" name="radio">
+            </div>
+            <div class=" aui-card-list-header aui-padding-l-0  aui-card-list-user pull-right width90Percent aui-border-b" onclick="window.location.href='shopdetail.html'">
+                <div class="aui-card-list-user-avatar pr-img">
+                    <img src="dist/imgs/large1.jpg">
+                </div>
+        
+                <div class="aui-card-list-user-name">
+                    <div class="aui-font-size-24 pruduct-name">ETUDE HOUSE 伊蒂之屋焦点明眸单色眼影哑光大地色自然</div>
+                </div>
+                <div class="pull-left aui-margin-t-5">
+                    <div class="card-footer2 widthauto pull-left">RMB<span class="product-price">280</span>.00</div>
+                    <div class="pull-left aui-font-size-26 aui-margin-l-10 ">x <span class="num-a">1</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="aui-card-list aui-border-t  clearfix cartItem aui-margin-b-0" >
+            <div class="sizebox2 hide">
+                <input class="text_box aui-font-size-30" type="number" value="1"/>
+                <span class="add add-able">+</span>
+                <span class="reduce reduce-able">-</span>
+            </div>
+            <div class="delete2 hide">
+                <img src="dist/imgs/delete.png" class="icon-ads-delete">
+            </div>
+            <div class="aui-list-item-label checkdiv pull-left ">
+                <input class="aui-radio checkbox" type="checkbox" name="radio">
+            </div>
+            <div class=" aui-card-list-header aui-padding-l-0  aui-card-list-user pull-right width90Percent aui-border-b" onclick="window.location.href='shopdetail.html'">
+                <div class="aui-card-list-user-avatar pr-img">
+                    <img src="dist/imgs/large1.jpg">
+                </div>
+        
+                <div class="aui-card-list-user-name">
+                    <div class="aui-font-size-24 pruduct-name">ETUDE HOUSE 伊蒂之屋焦点明眸单色眼影哑光大地色自然</div>
+                </div>
+                <div class="pull-left aui-margin-t-5">
+                    <div class="card-footer2 widthauto pull-left">RMB<span class="product-price">280</span>.00</div>
+                    <div class="pull-left aui-font-size-26 aui-margin-l-10 ">x <span class="num-a">1</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="aui-border-b-light margin-contain-bc aui-border-t-light" id="count-banner">
+          <div class="huodong-list">
+              <label for="">活动优惠:</label>
+              <span class="">¥0</span>
+          </div>
+          <div class="huodong-list">
+              <label for="">本仓总计:</label>
+              <span class="font-obvious-a money-all">¥0</span>
+          </div>
+     </section>
+    <!-- <div class="sty-dialog hide" style="width: 70%;height: 150px;background-color: #fff;position: absolute;border-radius:10px;left: 0;right: 0;top:0;bottom: 0;margin: auto;z-index: 1000">
+        <div style="text-align: center;padding:30px 0;" class="aui-font-size-18">全场满150包邮哦!马上去凑单?</div>
+        <div style="text-align: center;">
+            <div class="aui-btn aui-btn-success aui-btn-block aui-btn-sm dialog-btn1" style="width: 40%;display:inline-block">去凑单</div>
+            <div class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm dialog-btn2" style="width: 40%;display:inline-block">去付款</div>
+        </div>
+    </div> -->
+    <div class="mask hide"></div>
+    <div class="aui-content aui-border-b-light" id="settlement">
+        <div class="aui-list-item-label checkdiv2" style="display: inline-block">
+            <input class="aui-radio checkall" type="checkbox" name="radio">&nbsp;&nbsp;<span class="aui-font-size-26">全选</span>
+            <input id="total-num" type="hidden" value="0" />
+        </div>
+        <div class="btn-up pull-right aui-btn-primary">去结算</div>
+        <div class="aui-btn-danger btn-del pull-right hide">删除</div>
+        <div class="price-all aui-pull-right">
+            <div>
+                <label class="aui-font-size-26">总计:</label>
+                <span class="aui-font-size-26 font-obvious-a">¥ <i class="price-total">0.0</i></span>
+            </div>
+            <span class="aui-font-size-12 need-title">还差<span class="font-obvious-a">99</span>元即可包邮</span>
+        </div>
+    </div>
+
+<div class="mask hide"></div>
+<div class="popup-box2 hide">
+   <div class="tel-title">确认要删除么</div>
+   <a href="" class="btn-line btn-width">取消</a>
+   <a class="btn-primary btn-width bt-quere">确认</a>
+</div>
+
+<div class="aui-content" id="footer-nav">
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item" onclick="mall()">
+            <i class="aui-iconfont iconfont icon-index"></i>
+            <div class="aui-bar-tab-label">商城</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <i class="aui-iconfont iconfont icon-sorts"  onclick="sorts()"></i>
+            <div class="aui-bar-tab-label">分类</div>
+        </div>
+        <div class="aui-bar-tab-item ">
+            <div class="aui-badge hide"></div>
+            <i class="aui-iconfont iconfont icon-find"  onclick="finder()"></i>
+            <div class="aui-bar-tab-label">发现</div>
+        </div>
+        <div class="aui-bar-tab-item active">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-cart"  onclick="shoppingcart()"></i>
+            <div class="aui-bar-tab-label">购物车</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-my"  onclick="center()"></i>
+            <div class="aui-bar-tab-label">会员</div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/Orderdetail.js?'+Math.random()+'\">\<\/script>');
+    </script>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        font-size: 0.14rem;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+</head>
+<body>
+<!--订单详情-->
+<div class="aui-content" id="fixed_header2">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">订单详情</div>
+    </header>
+</div>
+<div class="aui-content margin-contain-t2">
+    <div class="aui-card-list">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list bg-success">
+                <li class=" order-list-header  order-status">
+                        已付款
+                </li>
+                <li class="order-fuzhu order-text">
+                        您的订单待发货。
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="aui-content clearfix">
+    <ul class="aui-list aui-media-list aui-margin-b-15">
+        <li class="aui-list-item aui-border-b-light aui-border-t-light">
+        	<div class="aui-ellipsis-2"><img src="dist/imgs/address_icon.png"></div>
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-text clearfix">
+                    <div class="aui-list-item-left aui-pull-left">收货人:<span class="consignee-name">大宝</span></div>
+                    <div class=" aui-font-size-14 aui-pull-right consignee-phone ">15358464141</div>
+                </div>
+                <div class="aui-list-item-text ">
+                    <span class="consignee-address">收货地址:浙江省杭州市西湖区文一西路550号</span>
+                </div>
+                <div class="aui-list-item-text">
+                    <span class="consignee-card">125588953666956</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="aui-card-list">
+    <div class="aui-card-list-content">
+        <ul class="aui-list aui-media-list" id="item-list">
+            <li class="aui-list-item aui-list-item-middle product-list aui-border-t-light">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media aui-pull-left">
+                        <img src="dist/imgs/large1.jpg">
+                    </div>
+                    <div class="aui-list-item-inner aui-pull-left width200">
+                        <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                        <span class="margin4b aui-font-size-30 aui-text-danger">¥500.0 <i class="font-light-a">x1</i></span>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle product-list aui-border-t-light">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media aui-pull-left">
+                        <img src="dist/imgs/large1.jpg">
+                    </div>
+                    <div class="aui-list-item-inner aui-pull-left width200">
+                        <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                        <span class="margin4b aui-font-size-30 aui-text-danger">¥500.0 <i class="font-light-a">x1</i></span>
+                    </div>
+                </div>
+            </li>
+          </ul>
+          <ul class="aui-list aui-media-list"> 
+            <li class="aui-list-item aui-border-t-light">
+                <div class="aui-list-item-inner padding-b0">
+                    <div class="aui-list-item-title pull-left">商品总价</div>
+                    <div class="pull-right font-light-a">¥<span class="price-total">200.0</span></div>
+                </div>
+            </li>
+            <li class="aui-list-item ">
+                <div class="aui-list-item-inner padding-b0">
+                    <div class="aui-list-item-title pull-left">运费</div>
+                    <div class="pull-right font-light-a" >¥<span class="price-fare">0.0</span></div>
+                </div>
+            </li>
+            <li class="aui-list-item ">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title pull-left">订单总价</div>
+                    <div class="pull-right font-light-a" >¥<span class="order-total">0.0</span></div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-border-t-light aui-border-b-light">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title pull-left font-light-b">需付款</div>
+                    <div class="pull-right font-obvious-a" >¥<span class="order-total">288.00</span></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="aui-content order-price" style="margin-bottom: 65px">
+    <ul class="aui-list aui-media-list">
+        <li class="aui-list-item aui-border-t-light ">
+            <div class="aui-list-item-inner padding-b0">
+                <div class="aui-list-item-title pull-left">订单编号: <span class="order-num"></span></div>
+            </div>
+        </li>
+        <li class="aui-list-item padding-b0 ">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title pull-left">创建时间: <span class="ctime"></span></div>
+            </div>
+        </li>
+<!--         <li class="aui-list-item padding-b0 aui-border-b-light">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title pull-left">付款时间: <span class="paytime"></span></div>
+            </div>
+        </li> -->
+    </ul>
+</div>
+
+<div class="mask hide"></div>
+
+<div class="aui-content" id="btn-nav" style="height: 50px">
+    <div class="pull-right btn-line2 btn-quxiao btn-yuan" onclick="window.location.href='orderdetail_deliver_tui.html'">退款</div>
+</div>
+</body>
+</html>

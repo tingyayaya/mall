@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的优惠券</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript" src="dist/js/aui-tab.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/personalcenter.js?'+Math.random()+'\">\<\/script>');
+    </script>
+
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        font-size: 0.8rem;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+<!--订单列表-->
+</head>
+<body>
+<div class="aui-content" id="fixed_header">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">我的优惠券</div>
+    </header>
+</div>
+
+<section class="aui-content margin-contain-t2 aui-padded-10">
+    <div class="aui-card-list">
+        <div class="aui-card-list-content-padded cardlist">
+            <p class="card-money font-obvious-b">5元</p>
+            <p class="card-name">妍集会员优惠券</p>
+            <p>有效期至:2017-02-09</p>
+            <p>会员专享|不可和其他活动叠加使用</p>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-content-padded cardlist overdue">
+            <p class="card-money font-obvious-b">5元</p>
+            <p class="card-name">妍集会员优惠券</p>
+            <p>有效期至:2017-02-09</p>
+            <p>会员专享|不可和其他活动叠加使用</p>
+            <i class="iconfont2 icon-alreadyuse position-ab"></i>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-content-padded cardlist overdue">
+            <p class="card-money font-obvious-b">5元</p>
+            <p class="card-name">妍集会员优惠券</p>
+            <p>有效期至:2017-02-09</p>
+            <p>会员专享|不可和其他活动叠加使用</p>
+            <i class="iconfont2 icon-overdue position-ab"></i>
+        </div>
+    </div>
+</section>
+
+<!--<div class="aui-content pass-tip">密码有6-20位英文字母、数字或者符号组成</div>-->
+<!--
+<div class="aui-content">
+    <div class="aui-content-padded">
+        <div class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm">下一步</div>
+    </div>
+</div>
+-->
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/Orderdetail.js?'+Math.random()+'\">\<\/script>');
+    </script>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        font-size: 0.14rem;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+</head>
+<body>
+<!--订单详情-->
+<div class="aui-content" id="fixed_header2">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">订单详情</div>
+    </header>
+</div>
+<div class="aui-content margin-contain-t2">
+    <div class="aui-card-list">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list bg-success">
+                <li class=" order-list-header  ">
+                        退款中
+                </li>
+                <li class="order-fuzhu">
+                        2017年0月0日 00:00
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="aui-card-list">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item order-list-header aui-border-b-light aui-border-t-light">
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-title pull-left aui-font-size-26">
+                             退款金额
+                        </div>
+                        <div class="pull-right font-obvious-a aui-font-size-26">￥288.00</div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-border-b aui-list-item-inner order-list-end text-light">
+                    <div class="clearfix">
+                       <span>退货原因:</span><span>343</span>
+                    </div>
+                    <div class="clearfix">
+                        <span>退款金额:</span><span>￥280.00</span>
+                    </div>
+                    <div class="clearfix">
+                         <span> 申请时间: </span><span>2017-00-00 00:00</span>
+                    </div>
+                    <div class="clearfix">
+                       <span> 退款编号: </span><span> 123456789</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+ </div>
+
+
+<div class="mask hide"></div>
+</body>
+</html>

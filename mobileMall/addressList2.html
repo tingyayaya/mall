@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>选择</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    </script>
+</head>
+<body>
+
+<div class="aui-content" id="fixed_header2">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">选择收货地址</div>
+        <span class="pull-right font-light-a aui-font-size-26 edit-cart" onclick="window.location.href='addressList.html'">管理</span>
+    </header>
+</div>
+<section class="aui-content margin-contain-bc shopcartNo hide" style="margin-top:120px;">
+    <img src="dist/imgs/noList.png">
+</section>
+<div class="sty-dialog hide" style="width: 70%;height: 150px;background-color: #fff;position: absolute;border-radius:10px;left: 0;right: 0;top:0;bottom: 0;margin: auto;z-index: 1000">
+    <div style="text-align: center;padding:30px 0;" class="aui-font-size-18">确认要删除么?</div>
+    <div style="text-align: center;">
+        <div class="aui-btn aui-btn-success aui-btn-block aui-btn-sm dialog-btn1" style="width: 40%;display:inline-block">取消</div>
+        <div class="aui-btn aui-btn-danger aui-btn-block aui-btn-sm dialog-btn2" style="width: 40%;display:inline-block">确定</div>
+    </div>
+</div>
+<div class="mask hide"></div>
+<section class="aui-content margin-contain-t2  clearfix" id="listaddress">
+    <div class="aui-card-list myaddress-list ads-yes" onclick="window.location.href='toOrder.html'">
+        <div class="address-content width33">
+            <p><span></span>陈志志 <span class="pull-right">1886445521</span></p>
+            <p class="address-a">北京市东花市北里广利佳20号楼6单元501室</p>
+            <p>3304577185156212125</p>
+        </div>
+    </div>
+    <div class="aui-card-list myaddress-list ads-no" onclick="window.location.href='toOrder.html'">
+        <div class="address-content width33">
+            <p><span>陈志志</span> <span class="pull-right">1886445521</span></p>
+            <p class="address-a">北京市东花市北里广利佳20号楼6单元501室</p>
+            <p>3304577185156212125</p>
+        </div>
+    </div>
+    <div class="aui-card-list myaddress-list ads-no" onclick="window.location.href='toOrder.html'">
+        <div class="address-content width33">
+            <p><span>陈志志</span> <span class="pull-right">1886445521</span></p>
+            <p class="address-a">北京市东花市北里广利佳20号楼6单元501室</p>
+            <p>3304577185156212125</p>
+        </div>
+    </div>
+    <div class="aui-card-list myaddress-list ads-no" onclick="window.location.href='toOrder.html'">
+        <div class="address-content width33">
+            <p><span>陈志志</span> <span class="pull-right">1886445521</span></p>
+            <p class="address-a">北京市东花市北里广利佳20号楼6单元501室</p>
+            <p>3304577185156212125</p>
+        </div>
+    </div>
+</section>
+</body>
+</html>

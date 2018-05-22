@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/productList2.js?'+Math.random()+'\">\<\/script>');
+    </script>    
+</head>
+<body>
+<div class="aui-content" id="fixed_header">
+    <!-- <header class="aui-bar aui-bar-nav aui-border-b">我的</header>-->
+    <div class="aui-searchbar" id="search">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-searchbar-input aui-border-radius">
+            <i class="aui-iconfont aui-icon-search"></i>
+            <input type="search" placeholder="请输入搜索内容" id="search-input">
+            <div class="aui-searchbar-clear-btn">
+                <i class="aui-iconfont aui-icon-close"></i>
+            </div>
+        </div>
+        <a class="aui-pull-left aui-btn btn-sort">
+           <i class="iconfont icon-sort"></i>
+        </a>
+    </div>
+</div>
+
+<!--分类-->
+<div class="aui-content sidebarBox" style="display: none">
+    <div class="sidebar">
+        <ul class="navContent">
+            <li><a href="#">全部</a></li>
+            <li><a href="#">新品推荐</a></li>
+            <li><a href="#">护肤养颜</a></li>
+            <li><a href="#">生活服务</a></li>
+            <li><a href="#">促销</a></li>
+            <li><a href="#">新品推荐</a></li>
+            <li><a href="#">护肤养颜</a></li>
+            <li><a href="#">生活服务</a></li>
+            <li><a href="#">促销</a></li>
+        </ul>
+    </div>
+    <div class="bgdiv" ></div>
+</div>
+
+<!--猜你喜欢-->
+<div class="aui-content margin-contain-t">
+    <div class="aui-card-list">
+        <div class="aui-card-list">
+            <div class="aui-card-list-content">
+                <ul class="aui-list aui-media-list">
+                    <li class="aui-list-item aui-list-item-middle" onclick="window.location.href='shopdetail.html'" id="productId1">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media" style="width: 5rem;">
+                                <img src="dist/imgs/home2.png" class="aui-img-round imgSrc">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14 productName">后 拱振享 阴阳平衡气津水溶液面霜三件套</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <span class="font-obvious-b productPrice"> ¥100.0</span>
+                                    <span class="productSalenum">已售:2423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item aui-list-item-middle" onclick="window.location.href='shopdetail.html'" id="productId2">
+                        <div class="aui-media-list-item-inner">
+                            <div class="aui-list-item-media" style="width: 5rem;">
+                                <img src="dist/imgs/home2.png" class="aui-img-round imgSrc">
+                            </div>
+                            <div class="aui-list-item-inner">
+                                <div class="aui-list-item-text">
+                                    <div class="aui-list-item-title aui-font-size-14 productName">后 拱振享 阴阳平衡气津水溶液面霜三件套</div>
+                                </div>
+                                <div class="aui-list-item-text">
+                                    <span class="font-obvious-b productPrice"> ¥100.0</span>
+                                    <span class="productSalenum">已售:2423</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="aui-content" id="footer-nav">
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item active" onclick="mallsort()">
+            <i class="aui-iconfont iconfont icon-index "></i>
+            <div class="aui-bar-tab-label">商城</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <i class="aui-iconfont iconfont icon-cart"  onclick="shoppingcart()"></i>
+            <div class="aui-bar-tab-label">购物车</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-badge hide"></div>
+            <i class="aui-iconfont iconfont icon-order"  onclick="order()"></i>
+            <div class="aui-bar-tab-label">订单</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-my"  onclick="center()"></i>
+            <div class="aui-bar-tab-label">我的</div>
+        </div>
+    </footer>
+</div>-->
+</body>
+</html>

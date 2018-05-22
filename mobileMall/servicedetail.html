@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>服务详情</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript" src="dist/js/aui-slide.js"></script>
+    <script type="text/javascript" src="dist/js/aui-tab.js"></script>
+    <script type="text/javascript" src="dist/js/owl.carousel.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/servicedetail.js?'+Math.random()+'\">\<\/script>');
+    </script>    
+</head>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        font-size: 0.8rem;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+<body>
+<div class="top-img-box">
+    <i class="top-img left-img pull-left" onclick="javascript:history.back(-1);"></i>
+<!--     <i class="right-img top-img pull-right" onclick="window.location.href='shoppingCart.html'"></i> -->
+</div>
+<div id="aui-slide">
+    <div class="aui-slide-wrap" >
+        <div class="aui-slide-node bg-dark">
+            <img src="dist/imgs/large1.jpg" />
+        </div>
+        <div class="aui-slide-node bg-dark">
+            <img src="dist/imgs/large2.jpg" />
+        </div>
+        <div class="aui-slide-node bg-dark">
+            <img src="dist/imgs/large3.jpg" />
+        </div>
+    </div>
+    <div class="aui-slide-page-wrap"><!--分页容器--></div>
+</div>
+<div class="aui-content aui-padded-10 product-name aui-font-size-16">
+    后 拱振享 阴阳平衡气津水溶液面霜三件套
+</div>
+<div class="aui-content aui-margin-b-15">
+    <ul class="aui-list aui-list-in">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title ">价格</div>
+                <div class="aui-list-item-right font-obvious-b productPrice">¥88.0</div>
+            </div>
+        </li>
+        <li class="aui-list-item" id="popup1-bottom">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">已选</div>
+                <div class="font-light-a list-name aui-font-size-14 chooseOne" style="width: 240px;text-align: right;">后 拱振享 阴阳平衡气津水溶液面霜三件套</div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="aui-popup1 aui-content" style="display: none">
+    <div class="aui-popup-content2">
+        <div class="img-box-icon aui-border-b choose-img">
+            <img src="dist/imgs/详情1.jpg">
+            <div class="goods-info">
+                <i class="font-obvious-b choose-price">¥555.0</i>
+                <p class="choose-inventory">库存数600件</p>
+                <p>
+                    <span class="chooselable">已选:</span>
+                    <span class="choose-name"></span>
+                </p>
+            </div>
+        </div>
+        <div style="height: 120px"></div>
+        <div class="aui-border-b goods-list">
+            <p>门店选择:</p>
+            <div class="spanbox choose1">
+                <span class="active" id="productSecId1">门店1</span>
+                <span id="productSecId2">门店2</span>
+                <span id="productSecId3">门店3</span>
+            </div>
+        </div>
+        <div class="aui-border-b goods-list">
+            <p>技师选择:</p>
+            <div class="spanbox choose2">
+                <span class="active" id="technicianId1">阿一</span>
+                <span id="technicianId2">阿二</span>
+                <span id="technicianId3">阿三</span>
+                <span id="technicianId4">阿四</span>
+                <span id="technicianId5">阿五</span>
+            </div>
+        </div>
+        <section class="aui-grid btns">
+            <div class="aui-row">
+                <div class="aui-content" style="padding: 0">
+                    <div class="aui-btn-success btn-up2 btn-toorder-a">立即预约</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="mask hide"></div>
+<div class="aui-content aui-margin-b-15 ">
+    <div class="aui-card-list aui-border-b " style="padding-bottom: 10px">
+        <div class="aui-card-list-header aui-card-list-user aui-border-t">
+            <div class="aui-card-list-user-name">
+                <div>技师</div>
+            </div>
+        </div>
+        <div class="aui-card-list-content-padded">
+            <ul class="owl-carousel techlist">
+                <li class="text-center">
+                    <img class="owl-lazy technicianImg" data-src="dist/imgs/small1.jpg" alt="技师" >
+                    <b class="technicianName">阿一</b>
+                    <p class="aui-font-size-12 techniciangrade">首席设计师</p>
+                </li>
+                <li class="text-center">
+                    <img class="owl-lazy technicianImg" data-src="dist/imgs/small1.jpg" alt="技师" >
+                    <b class="technicianName">阿二</b>
+                    <p class="aui-font-size-12 techniciangrade">首席设计师</p>
+                </li>
+                <li class="text-center">
+                    <img class="owl-lazy technicianImg" data-src="dist/imgs/small1.jpg" alt="技师" >
+                    <b class="technicianName">阿三</b>
+                    <p class="aui-font-size-12 techniciangrade">首席设计师</p>
+                </li>
+                <li class="text-center">
+                    <img class="owl-lazy technicianImg" data-src="dist/imgs/small1.jpg" alt="技师" >
+                    <b class="technicianName">阿四</b>
+                    <p class="aui-font-size-12 techniciangrade">首席设计师</p>
+                </li>
+                <li class="text-center">
+                    <img class="owl-lazy technicianImg" data-src="dist/imgs/small1.jpg" alt="技师" >
+                    <b class="technicianName">阿五</b>
+                    <p class="aui-font-size-12 techniciangrade">首席设计师</p>
+                </li>
+                <li class="text-center">
+                    <img class="owl-lazy technicianImg" data-src="dist/imgs/small1.jpg" alt="技师" >
+                    <b class="technicianName">阿六</b>
+                    <p class="aui-font-size-12 techniciangrade">首席设计师</p>
+                </li>
+                <li class="text-center">
+                    <img class="owl-lazy technicianImg" data-src="dist/imgs/small1.jpg" alt="技师" >
+                    <b class="technicianName">阿七</b>
+                    <p class="aui-font-size-12 techniciangrade">首席设计师</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="aui-tab aui-border-t" id="tab">
+    <div class="aui-tab-item aui-active">服务详情</div>
+    <div class="aui-tab-item">评价</div>
+</div>
+
+<div class="aui-content tab-detail margin-contain-b">
+    <img src="dist/imgs/详情1.jpg">
+    <img src="dist/imgs/详情2.jpg">
+    <img src="dist/imgs/详情3.jpg">
+</div>
+<div>
+    <div class="large-12 columns">
+
+    </div>
+</div>
+
+<div class="aui-content tab-evaluate margin-contain-b hide" id='appraise'>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user">
+            <div class="aui-card-list-user-name">
+                <div class="ev-userName">ovx648433600</div>
+                <small class="ev-time">2017.02.02</small>
+            </div>
+            <div class="aui-card-list-user-info ev-content">东西很好</div>
+        </div>
+        <div class="aui-card-list-content-padded clearfix products">
+            <div class="aui-row aui-row-padded">
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small3.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small1.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small2.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small3.jpg" class="ev-imgs">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user">
+            <div class="aui-card-list-user-name">
+                <div class="ev-userName">ovx648433600</div>
+                <small class="ev-time">2017.02.02</small>
+            </div>
+            <div class="aui-card-list-user-info ev-content">东西很好</div>
+        </div>
+        <div class="aui-card-list-content-padded clearfix products">
+            <div class="aui-row aui-row-padded">
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small3.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small1.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small2.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small3.jpg" class="ev-imgs">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user">
+            <div class="aui-card-list-user-name">
+                <div class="ev-userName">ovx648433600</div>
+                <small class="ev-time">2017.02.02</small>
+            </div>
+            <div class="aui-card-list-user-info ev-content">东西很好</div>
+        </div>
+        <div class="aui-card-list-content-padded clearfix products">
+            <div class="aui-row aui-row-padded">
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small3.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small1.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small2.jpg" class="ev-imgs">
+                </div>
+                <div class="aui-col-xs-3">
+                    <img src="dist/imgs/small3.jpg" class="ev-imgs">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="aui-content" id="btn-nav">
+    <div class="aui-btn-success btn-up pull-right btn-toorder-b">立即预约</div>
+</div>
+
+<input type='hidden' id='itemid' value='' />
+<input type='hidden' id='techid' value='' />
+<input type='hidden' id='storeid' value='' />
+
+</body>
+</html>

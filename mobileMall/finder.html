@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商城</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+     <link rel="stylesheet" href="dist/css/swiper.css" type="text/css">
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/finder.js?'+Math.random()+'\">\<\/script>');
+    </script>
+</head>
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-light" id="fixed_header">
+     <img src="dist/imgs/headerlogo.png" alt="" class="logoimg">
+</header>
+
+<div class="margin-contain-t3 margin-contain-b" id="item-list">
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user aui-border-b" onclick="window.location.href='finder-detail.html'">
+            <div class="aui-card-list-user-avatar">
+                <img src="dist/imgs/bozhuia.png" class="aui-img-round" />
+            </div>
+            <div class="aui-card-list-user-name aui-list-item-arrow">
+                <div>博主最爱</div>
+            </div>
+        </div>
+        <div class="aui-card-list-content" onclick="window.location.href='finder-detail.html'">
+            <img src="dist/imgs/bizhu.png" />
+        </div>
+        <div class="aui-card-list-header aui-card-list-user aui-border-b">
+            <div class="aui-card-list-user-name">
+                <div>我要给黑眼圈星人推荐眼霜了</div>
+            </div>
+        </div>
+        <div class="aui-card-list-footer aui-border-t">
+            <div><i class="aui-iconfont iconfont icon-find"></i> 666</div>
+            <div>9-29</div>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user aui-border-b">
+            <div class="aui-card-list-user-avatar">
+                <img src="dist/imgs/bozhuia.png" class="aui-img-round" />
+            </div>
+            <div class="aui-card-list-user-name aui-list-item-arrow">
+                <div>博主最爱</div>
+            </div>
+        </div>
+        <div class="aui-card-list-content">
+            <img src="dist/imgs/bizhu.png" />
+        </div>
+        <div class="aui-card-list-header aui-card-list-user aui-border-b">
+            <div class="aui-card-list-user-name">
+                <div>我要给黑眼圈星人推荐眼霜了</div>
+            </div>
+        </div>
+        <div class="aui-card-list-footer aui-border-t">
+            <div><i class="aui-iconfont iconfont icon-find"></i> 666</div>
+            <div>9-29</div>
+        </div>
+    </div>
+    <div class="aui-card-list">
+        <div class="aui-card-list-header aui-card-list-user aui-border-b">
+            <div class="aui-card-list-user-avatar">
+                <img src="dist/imgs/bozhuia.png" class="aui-img-round" />
+            </div>
+            <div class="aui-card-list-user-name aui-list-item-arrow">
+                <div>博主最爱</div>
+            </div>
+        </div>
+        <div class="aui-card-list-content">
+            <img src="dist/imgs/bizhu.png" />
+        </div>
+        <div class="aui-card-list-header aui-card-list-user aui-border-b">
+            <div class="aui-card-list-user-name">
+                <div>我要给黑眼圈星人推荐眼霜了</div>
+            </div>
+        </div>
+        <div class="aui-card-list-footer aui-border-t">
+            <div><i class="aui-iconfont iconfont icon-find"></i> 666</div>
+            <div>9-29</div>
+        </div>
+    </div>
+</div>
+<div class="aui-content" id="footer-nav">
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item" onclick="mall()">
+            <i class="aui-iconfont iconfont icon-index"></i>
+            <div class="aui-bar-tab-label">商城</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <i class="aui-iconfont iconfont icon-sorts"  onclick="sorts()"></i>
+            <div class="aui-bar-tab-label">分类</div>
+        </div>
+        <div class="aui-bar-tab-item active">
+            <div class="aui-badge hide"></div>
+            <i class="aui-iconfont iconfont icon-find"  onclick="finder()"></i>
+            <div class="aui-bar-tab-label">发现</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-cart"  onclick="shoppingcart()"></i>
+            <div class="aui-bar-tab-label">购物车</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-my"  onclick="center()"></i>
+            <div class="aui-bar-tab-label">会员</div>
+        </div>
+    </footer>
+</div>
+</body>
+
+<script src="dist/js/swiper.min.js"></script>
+</html>

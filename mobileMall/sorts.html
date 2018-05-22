@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/sorts.js?'+Math.random()+'\">\<\/script>');
+    </script>
+</head>
+<body>
+<div class="aui-content bg-fff" id="fixed_header">
+    <header class="aui-bar aui-bar-nav">
+        
+       <div class="searchbar search33" id="search" >
+           <input type="search"  id="search-input">
+           <i class="searchinput"></i>
+       </div>
+    </header>
+</div>
+
+<div class="aui-tab margin-contain-t2 fixed_header3 aui-border-b" id="tab">
+    <div class="aui-tab-item"><span class="aui-active">类目</span></div>
+    <div class="aui-tab-item"><span>功效</span></div>
+    <div class="aui-tab-item"><span>品牌</span></div>
+</div>
+<div class="tab-list-1" id="list1">
+    <div class="outline-box" onclick="window.location.href='productList.html'">面膜</div>
+    <div class="outline-box" onclick="window.location.href='productList.html'">洁面卸妆</div>
+    <div class="outline-box" onclick="window.location.href='productList.html'">防晒修护</div>
+</div>
+<div class="tab-list-1 hide" id="list2">
+    <div class="outline-box" onclick="window.location.href='productList.html'">面膜</div>
+    <div class="outline-box" onclick="window.location.href='productList.html'">洁面卸妆</div>
+    <div class="outline-box" onclick="window.location.href='productList.html'">防晒修护</div>
+</div>
+<div class="tab-list-1 hide" id="list3">
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d1.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d2.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d3.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d4.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d5.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d6.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d7.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d8.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d9.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d10.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d11.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d12.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d13.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d14.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d15.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d16.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d17.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d18.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d19.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d20.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d21.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d22.png" alt="">
+    </div>
+    <div class="out-box" onclick="window.location.href='productList.html'">
+        <img src="dist/imgs/d23.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d24.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d25.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d26.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d27.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d28.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d30.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d31.png" alt="">
+    </div>
+     <div class="out-box">
+        <img src="dist/imgs/d32.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d33.png" alt="">
+    </div>
+     <div class="out-box">
+        <img src="dist/imgs/d34.png" alt="">
+    </div>
+    <div class="out-box">
+        <img src="dist/imgs/d35.png" alt="">
+    </div>
+     <div class="out-box">
+        <img src="dist/imgs/d36.png" alt="">
+    </div>
+</div>
+<div class="aui-content" id="footer-nav">
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item" onclick="mall()">
+            <i class="aui-iconfont iconfont icon-index"></i>
+            <div class="aui-bar-tab-label">商城</div>
+        </div>
+        <div class="aui-bar-tab-item active">
+            <i class="aui-iconfont iconfont icon-sorts"  onclick="sorts()"></i>
+            <div class="aui-bar-tab-label">分类</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-badge hide"></div>
+            <i class="aui-iconfont iconfont icon-find"  onclick="finder()"></i>
+            <div class="aui-bar-tab-label">发现</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-cart"  onclick="shoppingcart()"></i>
+            <div class="aui-bar-tab-label">购物车</div>
+        </div>
+        <div class="aui-bar-tab-item">
+            <div class="aui-dot hide"></div>
+            <i class="aui-iconfont iconfont icon-my"  onclick="center()"></i>
+            <div class="aui-bar-tab-label">会员</div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

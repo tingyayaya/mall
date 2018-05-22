@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商城</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+     <link rel="stylesheet" href="dist/css/swiper.css" type="text/css">
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    </script>
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav aui-bar-light" id="fixed_header">
+    <a class="aui-pull-left aui-btn" onClick="javascript :history.back(-1);">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title"> <img src="dist/imgs/headerlogo.png" alt="" class="logoimg"></div>
+</header>
+
+<div class="margin-contain-t3" id="item-view">
+    <div class="container">
+        <img src="dist/imgs/detailbozhu.png" alt="">
+    </div>
+    <div class="aui-card-list  aui-padded-l-2 product-list aui-border-t-light" onclick="window.location.href='shopdetail.html'">
+        <div class="product-img-div aui-margin-t-1">
+            <img src="dist/imgs/large1.jpg" alt="">
+        </div>
+        <div class=" aui-pull-left product-text-div">
+           <p>美迪惠尔可莱丝韩国针剂水库面膜男女贴补水保湿美肤白皙收缩毛孔</p>
+           <div class="card-footer2 card-footer3 aui-pull-left aui-margin-t-2">RMB<span class="product-price">280</span>.00<p class="product-yuanlai">RMB280.00</p></div>
+           <div class="tolook aui-pull-right aui-margin-t-0">点击购买&gt;</div>
+        </div>
+    </div>
+</div>
+<script src="dist/js/swiper.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	var linkURL, params;
+    linkURL = window.location.href;
+    linkURL = decodeURI(linkURL);
+    params = getQueryString(linkURL);
+	
+	var getNews = function(){
+		$('#item-view').children().remove();
+        var mydata = {
+            type:'news',
+            func:'view',
+            id: params.id,
+            sessionId:sessionStorage.sId
+        };
+        mydata = JSON.stringify(mydata);
+        $.ajax({
+            type:'post',
+            data:{data:mydata},
+            url:'../data.php',
+            success:function(data){
+            	//data = JSON.parse(data);
+                if(data.rs==100){
+                	var content = '';
+                	
+                		 var list = data.list;
+                		 var images = list.content;
+                		 var imgcontent = '';
+                		 if(images.length>0){
+                			 for(var k=0; k<images.length; k++){
+                				 imgcontent += '<img src="'+images[k]+'" alt="" style="width:100%;" />';
+                			 }
+                		 }
+                		 content += '<div class="container">\
+                		 		<p style="text-align:center;">'+list.title+'</p>\
+                		        <p>'+imgcontent+'</p>\
+                		    </div>';
+                		    var items = list.items;
+                		    if(items.length > 0){
+                		    	for(var i=0; i<items.length; i++){
+                		    		var item = items[i];
+                		    content += '<div class="aui-card-list  aui-padded-l-2 product-list aui-border-t-light" onclick="window.location.href=\'shopdetail.html?productId='+item.productID+'\'">\
+                		        <div class="product-img-div aui-margin-t-1">\
+                		            <img src="'+item.images+'" alt="">\
+                		        </div>';
+                		        
+                		       content += '<div class=" aui-pull-left product-text-div aui-border-0">\
+                		           <p>'+item.productName+'</p>\
+                		           <div class="card-footer2 card-footer3 aui-pull-left ">RMB<span class="product-price">'+item.ordinarysale+'</span><p class="product-yuanlai">RMB'+item.retail+'</p></div>\
+                		           <div class="tolook aui-pull-right">点击购买&gt;</div>\
+                		        </div>\
+                		    </div>';
+                		    	}
+                		    }
+                	
+                	$('#item-view').append(content);
+                }
+            }
+        });  
+	};
+	getNews();
+	
+	//阅读计数
+	
+	var updateCount = function(){
+		var mydata = {
+	            type:'news',
+	            func:'updateCount',
+	            id: params.id,
+	            sessionId:sessionStorage.sId
+	        };
+	        mydata = JSON.stringify(mydata);
+	        $.ajax({
+	            type:'post',
+	            data:{data:mydata},
+	            url:'../data.php',
+	            success:function(data){
+	            	
+	            }
+	        });
+	};
+	updateCount();
+});
+</script>
+
+</body>
+
+</html>

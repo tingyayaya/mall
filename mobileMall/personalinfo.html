@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript" src="dist/js/aui-tab.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/personalcenter.js?'+Math.random()+'\">\<\/script>');
+    </script>
+
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        font-size: 0.8rem;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+<!--订单列表-->
+</head>
+<body>
+<div class="aui-content" id="fixed_header">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left btn-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">个人设置</div>
+    </header>
+</div>
+<div class="aui-content aui-margin-b-15 margin-contain-t2">
+    <ul class="aui-list aui-list-in">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">会员名</div>
+                <div class="aui-list-item-right">test</div>
+            </div>
+        </li>
+        <li class="aui-list-item" onclick="window.location.href='newPhone.html'">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">手机号码</div>
+                <div class="aui-list-item-right" id="tel">15364215412</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--<section class="aui-grid" id="btn-nav">
+    <div class="aui-row">
+        <div class="aui-content" style="padding: 0">
+            <div class="aui-btn-danger btn-up2 btn-add-address">退出当前账号</div>
+        </div>
+    </div>
+</section>-->
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+        <meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="dist/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="dist/js/api.js"></script>
+    <script type="text/javascript" src="dist/js/aui-toast.js"></script>
+    <script type="text/javascript">
+    	document.write('<script type=\"text/javascript\" src=\"dist/js/main.js?'+Math.random()+'\">\<\/script>');
+    </script>    
+</head>
+
+<style type="text/css">
+    body{
+        line-height: 1.5;
+        color: #212121;
+        background-color: #f5f5f5;
+        outline: 0;
+    }
+</style>
+<body>
+<div class="aui-content" id="fixed_header2">
+    <header class="aui-bar aui-bar-nav aui-border-b">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" onclick="javascript:history.back(-1);"></span>
+        </a>
+        <div class="aui-title">商品列表</div>
+    </header>
+</div>
+<div class="margin-contain-t2">
+    <div class="aui-card-list ">
+        <div class="aui-card-list-content">
+            <ul class="aui-list aui-media-list " id="item-list">
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light pay">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                            <span class="margin4b aui-font-size-30 ">¥500.0 <i class="font-light-a">x3</i></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light pay">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                            <span class="margin4b aui-font-size-30 ">¥500.0 <i class="font-light-a">x3</i></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="aui-list-item aui-list-item-middle product-list aui-border-b-light pay">
+                    <div class="aui-media-list-item-inner">
+                        <div class="aui-list-item-media aui-pull-left">
+                            <img src="dist/imgs/large1.jpg">
+                        </div>
+                        <div class="aui-list-item-inner aui-pull-left width200">
+                            <div class="aui-list-item-text productname">后 拱振享 阴阳平衡气津水溶液面霜三件套 组合套装</div>
+                            <span class="margin4b aui-font-size-30 ">¥500.0 <i class="font-light-a">x3</i></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(function(){
+	var linkURL, params,linkSearch;
+    linkURL = window.location.href;
+    linkURL = decodeURI(linkURL);
+    params = getQueryString(linkURL);
+    
+    var getCardList = function(){
+    	var arrid = params.ch_product;
+        var arrnum = params.ch_num;
+        $('#item-list').html('');
+        var mydata = {
+                type:'productDetails',
+                func:'listCart',
+                sessionId:sessionStorage.sId,
+                arrid: arrid,
+                arrnum: arrnum
+            };
+            mydata = JSON.stringify(mydata);
+            $.ajax({
+                type:'post',
+                url:'../data.php',
+                data:{data:mydata},
+                success:function(data){
+                    console.log(data);
+                    if(data.rs == 100){
+                        var content = '';
+                        var items = data.list;
+                        if(items && items.length>0){
+                        	for(var i=0; i<items.length; i++){
+                        		var item = items[i];
+                        		content += '<li class="aui-list-item aui-list-item-middle product-list aui-border-b-light pay">\
+                        		<div class="aui-media-list-item-inner">\
+                                <div class="aui-list-item-media aui-pull-left">\
+                                    <img src="'+item.images+'">\
+                                </div>\
+                                <div class="aui-list-item-inner aui-pull-left width200">\
+                                    <div class="aui-list-item-text productname">'+item.productName+'</div>\
+                                    <span class="margin4b aui-font-size-30 ">¥'+item.ordinarysale+' <i class="font-light-a">x'+item.num+'</i></span>\
+                                </div>\
+                            </div>\
+                        </li>';
+                        	}
+	                        $('#item-list').append(content);
+                        }   
+                      
+                    }
+                }
+            })
+        
+    };
+    
+    getCardList();
+
+});
+
+</script>
+</body>
+</html>
