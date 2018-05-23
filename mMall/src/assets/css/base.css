@@ -2,17 +2,18 @@ body, html, ul, li{
     margin: 0;
     padding: 0;
     font-size: 14px;
+    color: #444;
  }
  img{
      border: none;
  }
  a{
    text-decoration: none;
-   color:#444;
+   color: inherit;
    -webkit-tap-highlight-color: transparent;
  }
  a:link{
-     color: #444;
+    color: inherit;
  }
  ul,li{
    list-style-type: none;
