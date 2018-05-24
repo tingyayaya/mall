@@ -66,6 +66,9 @@ footer{
             text-align: center;
             padding-top:2px;
             box-sizing: border-box;
+            span { 
+                font-size: 12px;
+            }
             i {
                 display: block;
                 width: 28px;

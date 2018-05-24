@@ -1,6 +1,13 @@
 <template>
     <div class="home">
        <my-nav kinds="search"></my-nav>
+       <div class="swiper-container">
+           <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                   <img src="" alt="">
+               </div>
+           </div>
+       </div>
        我是首页
        <my-footer title="home"></my-footer>
     </div>
